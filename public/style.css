@@ -1,0 +1,193 @@
+/* this file is loaded by index.html and styles the page */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 2em 1em;
+  line-height: 1.5em;
+  background-color: black;
+}
+
+h1 {
+  font-style: bold;
+  color: black;
+  line-height: 1.1;
+  text-align: center;
+}
+
+form {
+  background-color: #eeeeee;
+  display: grid;
+  grid-gap: 1em;
+  padding: 1em;
+  max-width: 40ch;
+}
+
+input {
+  border: 1px solid silver;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+}
+
+button {
+  font-weight: bold;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border: 4px solid #32A431;
+  border-radius: .5em;
+}
+
+form button {
+  background-color: #32A431;
+  border: 2px solid currentColor;
+  border-radius: .25em;
+  cursor: pointer;
+  font-size: inherit;
+  line-height: 1.4em;
+  padding: 0.25em 1em;
+  max-width: 20ch;
+}
+
+footer {
+  margin-top: 3em;
+  padding-top: 1.5em;
+  border-top: 1px solid lightgrey;
+}
+
+img {
+  width:  150px;
+  height: 150px;
+}
+
+button_set {
+  width: 205px;
+  height: 205px;
+}
+
+#buttons {
+  display : flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  padding: 10px;
+  width: 100%;
+  justify-content: center;
+  max-width: 1000px;
+}
+
+#surround_buttons{
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+}
+
+header {
+  padding: 10px;
+  background-color: #32A431;
+}
+
+/* The turn arrows are all rotations of one image */
+#up_turn
+{
+  transform: rotate(180deg);
+}
+
+
+#left_turn
+{
+  transform: rotate(90deg);  
+}
+
+#right_turn
+{
+  transform: rotate(270deg);
+}
+
+#up
+{
+  transform: rotate(180deg);
+}
+
+#left
+{
+  transform: rotate(90deg);
+}
+
+#right
+{
+  transform: rotate(270deg);
+}
+#buttons_diagram{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Filler blocks are created in order to hold space for the override selection screen */
+.filler{
+  display: inline-block;
+  background-color: black !important;
+  border: 0px !important;
+}
+
+.row{
+  display:flex;
+  justify-content:center;
+}
+
+/* The explanation text */
+#mode_text{
+  color: black;
+  background-color: white;
+  font-weight: 550;
+  margin: 10px;
+  border: 4px solid #32A431;
+  border-radius: .5em;
+  font-size: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  width: 860px;
+}
+
+.override_button{
+  border: 4px solid red;
+}
+
+#words{
+  color: black;
+  background-color: white;
+  font-weight: 550;
+  margin: 10px;
+  border: 4px solid #32A431;
+  border-radius: .5em;
+  font-size: 20px;
+  padding: 20px;
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  width: 860px;
+}
+#video_demo{
+  display:flex;
+  justify-content:center;
+}
+#demo{
+  display:flex;
+  justify-content:center;
+}
+#words_container{
+    display:flex;
+  justify-content:center;
+}

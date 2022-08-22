@@ -1,0 +1,235 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A cool thing made with Glitch" />
+
+    <title>Smart Traffic</title>
+
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Smart Traffic Controller</h1>
+      <h2>Select your Mode</h2>
+    </header>
+    <br /><br />
+    <!-- The original 8 buttons for the modes -->
+    <div id = "surround_buttons">
+    <div id="buttons">
+      <button onclick="simple_mode_click()" id="0_button" >
+        <img
+          src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/simple_mode.png?v=1653794874035"
+        /><br />Simple Mode
+      </button>
+      <button onclick="machine_learning_mode_click()" id="1_button">
+        <img
+          src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/machine_learning_mode.png?v=1653794481456"
+        /><br />Machine Learning Mode
+      </button>
+
+      <button onclick="priority_mode_click()" id="2_button">
+        <img
+          src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/priority_mode.png?v=1653794766469"
+        /><br />Priority Mode
+      </button>
+
+      <button onclick="override_mode_click()" id="3_button">
+        <img
+          src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/override_mode.png?v=1653794762113"
+        /><br />Override Mode
+      </button>
+
+      <button onclick="night_mode_click()" id="4_button">
+        <img
+          src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/night_mode_2.png?v=1653972621606"
+        /><br />Night Mode
+      </button>
+
+      <button onclick="auto_walking_mode_click()" id="5_button">
+        <img
+          src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/automatic_walking_mode.png?v=1653972680200"
+        /><br />Safe Walking Mode
+      </button>
+
+      <button onclick="broken_mode_click()" id="6_button">
+        <img
+          src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/broken_mode.png?v=1653794479370"
+        /><br />Broken Mode
+      </button>
+
+      <button onclick="surprise_mode_click()" id="7_button">
+        <img
+          src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/surprise_mode.png?v=1653794769888"
+        /><br />Surprise Mode
+      </button>
+      <p id = "mode_text">You've heard of smart cars, smart fridges, and smart phones, but have you ever considered smart traffic?  Now traffic lights can come in 8 programmable modes. Your city can run smoother and safer at the same time!</p>
+    </div>
+    </div>
+    <br />
+    <br />
+    
+    <!-- Override Mode's selection buttons --> 
+    <div class = "row">
+      <div>
+        <button class="filler">
+          <img
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/filler_black.png?v=1654152504605"
+          />&nbsp;
+        </button>
+      </div>
+      <div>
+        <button onclick="up()" id = "override_0" class= "override_button">
+          <img
+            id="up"
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/60627.png?v=1654150965946"
+          />
+        </button>
+      </div>
+      <div>
+        <button onclick="up_turn()" id = "override_1" class="override_button">
+          <img
+            id="up_turn"
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/arrow_arrows_direction_left_turn-512.webp?v=1654151610045"
+          />
+        </button>
+      </div>
+
+      <div>
+        <button class="filler" >
+          <img
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/filler_black.png?v=1654152504605"
+          />&nbsp;
+        </button>
+      </div>
+    </div>
+    <br />
+
+    <div class = "row">
+      <div>
+        <button onclick="left_turn()" id ="override_2" class="override_button">
+          <img
+            id="left_turn"
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/arrow_arrows_direction_left_turn-512.webp?v=1654151610045"
+          />
+        </button>
+      </div>
+
+      <div>
+        <button class="filler">
+          <img
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/filler_black.png?v=1654152504605"
+          />&nbsp;
+        </button>
+      </div>
+
+      <div>
+        <button class="filler">
+          <img
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/filler_black.png?v=1654152504605"
+          />&nbsp;
+        </button>
+      </div>
+      <div>
+        <button onclick="right()" id = "override_3" class = "override_button">
+          <img
+            id="right"
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/60627.png?v=1654150965946"
+          />
+        </button>
+      </div>
+    </div>
+
+    <div class = "row">
+      <div>
+        <button onclick="left()" id = "override_4" class= "override_button">
+          <img
+            id="left"
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/60627.png?v=1654150965946"
+          />
+        </button>
+      </div>
+      <div>
+        <button class="filler">
+          <img
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/filler_black.png?v=1654152504605"
+          />&nbsp;
+        </button>
+      </div>
+      <div>
+        <button class="filler">
+          <img
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/filler_black.png?v=1654152504605"
+          />&nbsp;
+        </button>
+      </div>
+      <div>
+        <button onclick="right_turn()" id = "override_5" class ="override_button">
+          <img
+            id="right_turn"
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/arrow_arrows_direction_left_turn-512.webp?v=1654151610045"
+          />
+        </button>
+      </div>
+
+      
+    </div>
+    <div class = "row">
+      <div>
+        <button class="filler">
+          <img
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/filler_black.png?v=1654152504605"
+          />&nbsp;
+        </button>
+      </div>
+      <div>
+        <button onclick="down_turn()" id = "override_6" class = "override_button">
+          <img
+            id="down_turn"
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/arrow_arrows_direction_left_turn-512.webp?v=1654151610045"
+          />
+        </button>
+      </div>
+      <div>
+        <button onclick="down()" id= "override_7" class = "override_button">
+          <img
+            id="down"
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/60627.png?v=1654150965946"
+          />
+        </button>
+      </div>
+
+      <div>
+        <button class="filler" >
+          <img
+            src="https://cdn.glitch.global/c147efa7-a27c-4b09-b335-0aabcaff90e9/filler_black.png?v=1654152504605"
+          />&nbsp;
+        </button>
+      </div>
+    </div>
+    <div id = "words_container">
+      <p id = "words">Video Demo of Project:</p>
+    </div>
+    
+    <div id = "video_demo">
+      
+      <iframe id = "demo" width="560" height="315" src="https://www.youtube.com/embed/naZrCyXZW6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+
+  </body>
+</html>
